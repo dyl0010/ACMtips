@@ -29,12 +29,46 @@
 
 ## .\hjxxx
 此目录是**华为机试**专题 [https://www.nowcoder.com/ta/huawei](https://www.nowcoder.com/ta/huawei)
- - <font color=#1DA1F2>HJ1	字符串最后一个单词的长度</font> <br>
+ - 🔹HJ1  字符串最后一个单词的长度 <br>
  擅用`std::getline`函数，可以帮助我们灵活地处理各种方式的程序输入。
- - <font color=#1DA1F2>HJ2	计算某字符出现次数</font> <br>
+ - 🔹HJ2	计算某字符出现次数 <br>
  程序中尽量使用`std::isupper`、`std::isalpha`这些标准库提供的设施，减少算法实现上的漏洞。
- - <font color=#1DA1F2>HJ3	明明的随机数</font> <br>	
+ - 🔹HJ3	明明的随机数 <br>	
  此处使用的去重逻辑必须在排序之后，这与`std::unique`算法的原理密切相关，不熟悉的同学回去背课本！另外注意这里将一个容器(即将出`scope`被销毁)所有元素追加到另一容器后所使用的方法`std::move(curr.begin(), curr.end(), std::back_inserter(all));`。使用`std::move`可以提高程序的性能，`std::back_inserter`(插入迭代器)的加入提供了极大的方便。
- - <font color=#1DA1F2>HJ4	字符串分隔</font> <br>
- - <font color=#1DA1F2>HJ5	进制转换</font> <br>
+ - 🔹HJ4	字符串分隔 <br>
+ - 🔹HJ5	进制转换 <br>
  注意约定中提到的**多组输入**和**输出时格式问题**。
+ - 🔹HJ6	质数因子 <br>
+ 这里实际要解决一个数的质数分解式(唯一)，最开始使用朴素的短除法(如下代码)，提示超时，于是我们采取了一点小手段：**每个合数至少有一个小于或等于其平方根的质因数**，利用这个结论，我们可以只将迭代进行到`sqrt(input)`处。
+ ```cpp
+ {
+    // ...
+
+    //
+    // 直接使用短除法 => 超时
+    while (input > 1) {
+        if (input % curr == 0) {
+            input /= curr;
+            std::cout << curr << ' ';
+        } else {
+            ++curr;
+        }
+    }
+ }
+ ```
+ - 🔹HJ7	取近似值 <br>
+ 使用`std::round(double)`
+ - 🔹HJ8	合并表记录 <br>
+ 使用`std::map`
+ - 🔹HJ9	提取不重复的整数 <br>
+ `std::reverse`可以逆置一个迭代器区间
+ - 🔹HJ10	字符个数统计 <br>
+ 我们又用了之前使用过的一个去重技巧`input.erase(std::unique(input.begin(), input.end()), input.end());`
+ - 🔹HJ11	数字颠倒 <br>
+ - 🔹HJ12	字符串反转 <br>
+ - 🔹HJ13	句子逆序 <br>
+ **正序进 逆序出**，是用`std::stack`的绝佳时机！
+ - 🔹HJ14	字符串排序 <br>
+ `std::sort`对字符串的默认排序策略便是**字典顺序**
+ - 🔹HJ15	求int型正整数在内存中存储时1的个数 <br>
+ 到二进制的转换，本质上就是**模2运算**(`mod 2`)
