@@ -72,3 +72,8 @@
  `std::sort`对字符串的默认排序策略便是**字典顺序**
  - 🔹HJ15	求int型正整数在内存中存储时1的个数 <br>
  到二进制的转换，本质上就是**模2运算**(`mod 2`)
+
+ ## .\leetcode
+此目录是**LeetCode**专题 [https://leetcode.com/problemset/all/](https://leetcode.com/problemset/all/)
+ - 🔸lc1. Two Sum <br>
+ 当前方案的时间复杂度是`O(n^2)`！
