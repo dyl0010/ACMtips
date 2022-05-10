@@ -72,6 +72,14 @@
  `std::sort`对字符串的默认排序策略便是**字典顺序**
  - 🔹HJ15	求int型正整数在内存中存储时1的个数 <br>
  到二进制的转换，本质上就是**模2运算**(`mod 2`)
+ - 🔹HJ50 四则运算 <br>
+```c++
+//
+// 划分成三个处理过程
+// [1] parse_expr <- user.input
+// [2] to_postfix <- parse_expr.result
+// [3] evaluate   <- to_postfix.result
+```
 
  ## .\leetcode
 此目录是**LeetCode**专题 [https://leetcode.com/problemset/all/](https://leetcode.com/problemset/all/)
