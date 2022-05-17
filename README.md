@@ -102,3 +102,9 @@
 - 🔹Primes in numbers
 - 🔹Reverse or rotate
 - 🔹Second Variation on Caesar Cipher
+- 🔹Perimeter of squares in a rectangle.d <br>
+实际上是一个斐波那契数列求前n项和问题.
+- 🔹Phone Directory.d <br>
+使用`matched()`函数来匹配号码，使用`extract_name()`来提取文本行中的人名，使用e`extract_address()`来提取文本行中的地址。其中地址的格式不太明显，
+可以根据测试用例来确定：地址中除了有`字母`和`数字`外还可以有`空格`、`.`和`-`，另外`_`需要使用空格来替换，最后注意去掉前导和后导空白。
+真实过滤数据中的确不会有完全格式良好的数据，都需要进行一定的清洗.
